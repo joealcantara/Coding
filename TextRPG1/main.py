@@ -2,6 +2,13 @@
 # Imports
 import random
 
+class monster:
+    def __init__(self, name, skill, stamina, luck):
+        self.name = name
+        self.skill = skill
+        self.stamina = stamina
+        self.luck = luck
+
 class player:
     def __init__(self, name):
         self.name = name
