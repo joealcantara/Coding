@@ -11,6 +11,7 @@ people = ['Bill Gates', 'Seth Lazar', 'Chris Watkins']
 print("I'd like to invite you to dinner " + people[0])
 print("I'd like to invite you to dinner " + people[1])
 print("I'd like to invite you to dinner " + people[2])
+print(len(people))
 print(people[2] + ", sorry you can't make it")
 people[2] = "Jewel Staite"
 print("I'd like to invite you to dinner " + people[0])
