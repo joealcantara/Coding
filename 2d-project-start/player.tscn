@@ -1,10 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://brejujnsqwkfj"]
+[gd_scene load_steps=8 format=3 uid="uid://brejujnsqwkfj"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0vjbh"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_iqtkn"]
+[ext_resource type="PackedScene" uid="uid://fkjoswtc83vp" path="res://gun.tscn" id="3_1rvrq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0pty"]
 radius = 39.0512
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_obqlg"]
+radius = 33.0606
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1wgo"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mh4xg"]
+bg_color = Color(0.152941, 0.905882, 0.188235, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_0vjbh")
@@ -15,3 +32,31 @@ unique_name_in_owner = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -14)
 shape = SubResource("CircleShape2D_m0pty")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Gun" parent="." instance=ExtResource("3_1rvrq")]
+position = Vector2(0, -34)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+light_mask = 0
+visibility_layer = 2
+position = Vector2(-1, -8)
+shape = SubResource("CircleShape2D_obqlg")
+debug_color = Color(0.887705, 0.291028, 0.40308, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -127.0
+offset_top = -153.0
+offset_right = 124.0
+offset_bottom = -126.0
+theme_override_styles/background = SubResource("StyleBoxFlat_m1wgo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mh4xg")
+value = 100.0
+show_percentage = false
