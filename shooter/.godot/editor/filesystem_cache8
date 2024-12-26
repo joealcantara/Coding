@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734984767
+::res://::1735051694
 icon.svg::CompressedTexture2D::8583370479418416453::1734899921::1734899930::1::::<><>::
 ::res://graphics/::1734900698
 ::res://graphics/car/::1734900700
@@ -196,7 +196,8 @@ bg.png::CompressedTexture2D::7614432498417316162::1734900698::1734900699::1::::<
 over.png::CompressedTexture2D::4721123962491048102::1734900698::1734900699::1::::<><>::
 progress.png::CompressedTexture2D::2972216130475592008::1734900698::1734900699::1::::<><>::
 ::res://scenes/::1734985547
-::res://scenes/levels/::1734985522
-level.tscn::PackedScene::6652583135809331725::1734984801::0::1::::<><>::
-player.tscn::PackedScene::8865845025632750275::1734985522::0::1::::<><>::uid://swls4ptjw8rc::::res://graphics/player/player.png<>uid://d2uoelpnadqe3::::res://graphics/projectiles/blue.png
-::res://scenes/player/::1734985547
+::res://scenes/levels/::1734986356
+bed_comp.tscn::PackedScene::8019353312156836043::1734986356::0::1::::<><>::uid://bk1p8yl2vdkyj::::res://graphics/objects/bed.png<>uid://dsivf4rg1u8lk::::res://graphics/objects/pillow_small.png<>uid://8o0xxdpjml26::::res://graphics/objects/pillow_large.png
+level.tscn::PackedScene::6652583135809331725::1734986356::0::1::::<><>::uid://duj34ftacnfsf::::res://icon.svg<>uid://cgpj8w7b3pjgw::::res://graphics/car/main.png<>uid://dykxf4el5q8lj::::res://scenes/player/player.tscn<>uid://dmivtvqqquq00::::res://scenes/levels/bed_comp.tscn
+::res://scenes/player/::1734986356
+player.tscn::PackedScene::8865845025632750275::1734986356::0::1::::<><>::uid://swls4ptjw8rc::::res://graphics/player/player.png<>uid://d2uoelpnadqe3::::res://graphics/projectiles/blue.png<>uid://c27qcxr5fa23x::::res://graphics/projectiles/grenade.png
