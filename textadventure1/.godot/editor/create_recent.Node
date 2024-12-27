@@ -1,4 +1,8 @@
-PanelContainer
+ScrollContainer
+Label
 VBoxContainer
+HBoxContainer
+LineEdit
+PanelContainer
 MarginContainer
 Control

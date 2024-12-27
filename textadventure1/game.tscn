@@ -1,4 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ynu33nuhsyrh"]
+[gd_scene load_steps=9 format=3 uid="uid://ynu33nuhsyrh"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_t3tsv"]
+[ext_resource type="FontFile" uid="uid://crlvd2f7qap8p" path="res://resources/mononoki_mono_regular.ttf" id="1_tspwe"]
+[ext_resource type="Script" path="res://input.gd" id="2_3oevp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msnyn"]
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
@@ -9,6 +13,10 @@ bg_color = Color(0.214703, 0.214703, 0.214702, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytx81"]
 bg_color = Color(0.217101, 0.217101, 0.217101, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g7kya"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pyxwa"]
+
 [node name="Game" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -16,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t3tsv")
 
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -35,14 +44,43 @@ theme_override_constants/margin_bottom = 20
 
 [node name="Rows" type="VBoxContainer" parent="Background/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
 
 [node name="GameInfo" type="PanelContainer" parent="Background/MarginContainer/Rows"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwef0")
 
+[node name="Scroll" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
+layout_mode = 2
+
+[node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
 [node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ytx81")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/Rows/InputArea"]
+layout_mode = 2
+
+[node name="Caret" type="Label" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_tspwe")
+theme_override_font_sizes/font_size = 40
+text = " > "
+
+[node name="Input" type="LineEdit" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_tspwe")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g7kya")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pyxwa")
+max_length = 40
+script = ExtResource("2_3oevp")
+
+[connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]

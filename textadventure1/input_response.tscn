@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3bbffw5xhox3"]
+
+[ext_resource type="FontFile" uid="uid://crlvd2f7qap8p" path="res://resources/mononoki_mono_regular.ttf" id="1_fkddd"]
+[ext_resource type="Script" path="res://input_response.gd" id="1_uru6t"]
+
+[node name="InputResponse" type="VBoxContainer"]
+script = ExtResource("1_uru6t")
+
+[node name="InputHistory" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.571649, 0.571649, 0.571649, 1)
+theme_override_fonts/font = ExtResource("1_fkddd")
+theme_override_font_sizes/font_size = 36
+text = " > This is what the user typed."
+
+[node name="Response" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_fkddd")
+theme_override_font_sizes/font_size = 40
+text = "This is what the game will give back.
+"

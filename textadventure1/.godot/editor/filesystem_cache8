@@ -1,3 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735252599
+::res://::1735299278
+game.tscn::PackedScene::1712634991855280745::1735299278::0::1::::<><>::uid://crlvd2f7qap8p::::res://resources/mononoki_mono_regular.ttf<>res://input.gd
 icon.svg::CompressedTexture2D::7327776628730869856::1735252595::1735252599::1::::<><>::
+input.gd::GDScript::-1::1735298848::0::1::::<>LineEdit<>::
+::res://resources/::1735299278
+mononoki_mono_regular.ttf::FontFile::5990041706087029997::1735299115::1735299278::1::::<><>::
