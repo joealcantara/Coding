@@ -1,7 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735299278
-game.tscn::PackedScene::1712634991855280745::1735299278::0::1::::<><>::uid://crlvd2f7qap8p::::res://resources/mononoki_mono_regular.ttf<>res://input.gd
+::res://::1735340068
+command_processor.gd::GDScript::-1::1735338924::0::1::::<>Node<>::
+game.gd::GDScript::-1::1735339320::0::1::::<>Control<>::
+game.tscn::PackedScene::1712634991855280745::1735339443::0::1::::<><>::res://game.gd<>uid://crlvd2f7qap8p::::res://resources/mononoki_mono_regular.ttf<>res://input.gd<>res://command_processor.gd
 icon.svg::CompressedTexture2D::7327776628730869856::1735252595::1735252599::1::::<><>::
-input.gd::GDScript::-1::1735298848::0::1::::<>LineEdit<>::
+input.gd::GDScript::-1::1735300715::0::1::::<>LineEdit<>::
+input_history.tscn::PackedScene::1458572339552296281::1735339042::0::1::::<><>::uid://crlvd2f7qap8p::::res://resources/mononoki_mono_regular.ttf
+input_response.gd::GDScript::-1::1735335073::0::1::::<>VBoxContainer<>::
+input_response.tscn::PackedScene::6740263310963998026::1735339443::0::1::::<><>::res://input_response.gd<>uid://u1sqdf4bt634::::res://input_history.tscn<>uid://bsp5x36hs5ks1::::res://response.tscn
+response.tscn::PackedScene::3682649637417421398::1735339443::0::1::::<><>::uid://crlvd2f7qap8p::::res://resources/mononoki_mono_regular.ttf
 ::res://resources/::1735299278
 mononoki_mono_regular.ttf::FontFile::5990041706087029997::1735299115::1735299278::1::::<><>::

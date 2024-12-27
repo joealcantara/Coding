@@ -1,9 +1,9 @@
-Node
-ScrollContainer
 Label
 VBoxContainer
+MarginContainer
+PanelContainer
+Node
+ScrollContainer
 HBoxContainer
 LineEdit
-PanelContainer
-MarginContainer
 Control
