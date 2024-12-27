@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsp5x36hs5ks1"]
+
+[ext_resource type="FontFile" uid="uid://crlvd2f7qap8p" path="res://resources/mononoki_mono_regular.ttf" id="1_atc66"]
+
+[node name="Response" type="Label"]
+theme_override_fonts/font = ExtResource("1_atc66")
+theme_override_font_sizes/font_size = 40
+text = "This is what the game will give back.
+"
+autowrap_mode = 3

@@ -3,3 +3,5 @@ res://input.gd
 res://game.gd
 res://input_response.tscn
 res://input_response.gd
+res://command_processor.gd
+res://response.tscn

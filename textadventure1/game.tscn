@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ynu33nuhsyrh"]
+[gd_scene load_steps=10 format=3 uid="uid://ynu33nuhsyrh"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_t3tsv"]
 [ext_resource type="FontFile" uid="uid://crlvd2f7qap8p" path="res://resources/mononoki_mono_regular.ttf" id="1_tspwe"]
 [ext_resource type="Script" path="res://input.gd" id="2_3oevp"]
+[ext_resource type="Script" path="res://command_processor.gd" id="2_xqu0w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msnyn"]
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
@@ -25,6 +26,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t3tsv")
+
+[node name="CommandProcessor" type="Node" parent="."]
+script = ExtResource("2_xqu0w")
 
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -56,6 +60,8 @@ layout_mode = 2
 
 [node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/separation = 20
 
 [node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
