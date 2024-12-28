@@ -11,20 +11,29 @@ var max_scroll_length := 0
 @onready var history_rows = $Background/MarginContainer/Rows/GameInfo/Scroll/HistoryRows
 @onready var scroll = $Background/MarginContainer/Rows/GameInfo/Scroll
 @onready var scrollbar = scroll.get_v_scroll_bar()
+@onready var room_manager = $RoomManager
 
 
 func _ready() -> void:
 	scrollbar.changed.connect(handle_scrollbar_changed)
 	max_scroll_length = scrollbar.max_value
-	var starting_message = Response.instantiate()
-	starting_message.text = "You find yourself in a house with no memory of how you got there. You need to find your way out. You can type 'help' to see available commands."
-	add_response_to_game(starting_message)
+	
+	handle_response_generated("Welcome to the retro text adventure! You can type 'help' to see available commands.")
+	
+	command_processor.response_generated.connect(handle_response_generated)
+	command_processor.initialize(room_manager.get_child(0))
 
 
 func handle_scrollbar_changed():
 	if max_scroll_length != scrollbar.max_value:
 		max_scroll_length = scrollbar.max_value
 		scroll.scroll_vertical = max_scroll_length
+
+
+func handle_response_generated(response_text):
+	var response = Response.instantiate()
+	response.text = response_text
+	add_response_to_game(response)
 
 
 func _on_input_text_submitted(new_text: String) -> void:

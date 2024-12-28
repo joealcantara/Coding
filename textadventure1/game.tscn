@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://ynu33nuhsyrh"]
+[gd_scene load_steps=12 format=3 uid="uid://ynu33nuhsyrh"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_t3tsv"]
 [ext_resource type="FontFile" uid="uid://crlvd2f7qap8p" path="res://resources/mononoki_mono_regular.ttf" id="1_tspwe"]
 [ext_resource type="Script" path="res://input.gd" id="2_3oevp"]
 [ext_resource type="Script" path="res://command_processor.gd" id="2_xqu0w"]
 [ext_resource type="PackedScene" uid="uid://dp5ltme1orj08" path="res://game_room.tscn" id="3_lsq0n"]
+[ext_resource type="Script" path="res://room_manager.gd" id="3_nixjl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msnyn"]
 bg_color = Color(0.125911, 0.125911, 0.125911, 1)
@@ -32,8 +33,15 @@ script = ExtResource("1_t3tsv")
 script = ExtResource("2_xqu0w")
 
 [node name="RoomManager" type="Node" parent="."]
+script = ExtResource("3_nixjl")
 
-[node name="GameRoom" parent="RoomManager" instance=ExtResource("3_lsq0n")]
+[node name="HouseRoom" parent="RoomManager" instance=ExtResource("3_lsq0n")]
+
+[node name="OutsideRoom" parent="RoomManager" instance=ExtResource("3_lsq0n")]
+offset_left = 503.0
+offset_right = 753.0
+room_name = "Outside"
+room_description = "Outside, in the village."
 
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 1

@@ -1,0 +1,5 @@
+res://scenes/game.tscn
+res://scenes/character.tscn
+res://scenes/monster.tscn
+res://game.gd
+res://character.gd
