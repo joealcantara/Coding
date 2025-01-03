@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://u1sqdf4bt634"]
-
-[ext_resource type="FontFile" uid="uid://crlvd2f7qap8p" path="res://resources/mononoki_mono_regular.ttf" id="1_ym5yw"]
-
-[node name="InputHistory" type="Label"]
-theme_override_colors/font_color = Color(0.571649, 0.571649, 0.571649, 1)
-theme_override_fonts/font = ExtResource("1_ym5yw")
-theme_override_font_sizes/font_size = 36
-text = " > This is what the user typed."
